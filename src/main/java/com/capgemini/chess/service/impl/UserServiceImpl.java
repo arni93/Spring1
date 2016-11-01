@@ -9,6 +9,12 @@ import com.capgemini.chess.dataaccess.dao.UserDao;
 import com.capgemini.chess.service.UserService;
 import com.capgemini.chess.service.to.UserProfileTO;
 
+/**
+ * Implementation of UserService
+ * 
+ * @author AWOZNICA
+ *
+ */
 @Service
 public class UserServiceImpl implements UserService {
 	@Autowired

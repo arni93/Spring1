@@ -12,6 +12,13 @@ import com.capgemini.chess.dataaccess.entities.UserEntity;
 import com.capgemini.chess.service.mapper.UserProfileMapper;
 import com.capgemini.chess.service.to.UserProfileTO;
 
+/**
+ * User data access object. It is implementation of UserDao. It is a stub for
+ * testing services
+ * 
+ * @author AWOZNICA
+ *
+ */
 @Repository
 public class UserDaoImpl implements UserDao {
 	private long nextUserId = 0;

@@ -14,8 +14,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.capgemini.chess.dataaccess.dao.AdministrationDao;
-import com.capgemini.chess.dataaccess.dao.impl.AdministrationDaoImpl;
+import com.capgemini.chess.dataaccess.dao.UserDao;
+import com.capgemini.chess.dataaccess.dao.impl.UserDaoImpl;
 import com.capgemini.chess.service.impl.AdministrationServiceImpl;
 import com.capgemini.chess.service.to.UserProfileTO;
 
@@ -37,8 +37,8 @@ public class AdministrationServiceTest {
 
 		@Bean
 		@Scope("prototype")
-		public AdministrationDao adniminstrationDao() {
-			return new AdministrationDaoImpl();
+		public UserDao userDao() {
+			return new UserDaoImpl();
 		}
 	}
 

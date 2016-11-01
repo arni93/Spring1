@@ -4,6 +4,14 @@ import java.util.List;
 
 import com.capgemini.chess.service.to.UserProfileTO;
 
+/**
+ * interface contains business logic for user accounts administration
+ * 
+ * @author AWOZNICA
+ *
+ */
+
+// TODO add javadocs
 public interface AdministrationService {
 	UserProfileTO findUserById(long userId);
 
