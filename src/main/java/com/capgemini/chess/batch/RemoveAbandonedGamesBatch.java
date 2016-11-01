@@ -25,6 +25,7 @@ public class RemoveAbandonedGamesBatch {
 			if (removalResult == true) {
 				removedGames.add(game);
 			}
+			System.out.println("removed games = " + removedGames.size());
 		}
 		return removedGames;
 	}
