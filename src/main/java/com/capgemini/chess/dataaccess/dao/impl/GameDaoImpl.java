@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.stereotype.Repository;
+
 import com.capgemini.chess.dataaccess.dao.GameDao;
 import com.capgemini.chess.dataaccess.entities.GameEntity;
 import com.capgemini.chess.service.mapper.GameMapper;
@@ -16,6 +18,7 @@ import com.capgemini.chess.service.to.GameTO;
  * @author AWOZNICA
  *
  */
+@Repository
 public class GameDaoImpl implements GameDao {
 
 	private long nextGameId = 0;

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.stereotype.Repository;
+
 import com.capgemini.chess.dataaccess.dao.ChallengeDao;
 import com.capgemini.chess.dataaccess.entities.ChallengeEntity;
 import com.capgemini.chess.enums.ChallengeStatus;
@@ -18,6 +20,7 @@ import com.capgemini.chess.service.to.ChallengeTO;
  * @author AWOZNICA
  *
  */
+@Repository
 public class ChallengeDaoImpl implements ChallengeDao {
 	private long nextId = 0;
 	private final List<ChallengeEntity> challengeList = new ArrayList<>();

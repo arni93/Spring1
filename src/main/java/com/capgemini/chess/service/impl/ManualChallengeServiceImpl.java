@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.capgemini.chess.dataaccess.dao.ChallengeDao;
 import com.capgemini.chess.enums.ChallengeStatus;
@@ -18,6 +19,7 @@ import com.capgemini.chess.service.to.UserProfileTO;
  * @author AWOZNICA
  *
  */
+@Service
 public class ManualChallengeServiceImpl implements ManualChallangeService {
 	@Autowired
 	private UserService userService;
