@@ -46,7 +46,7 @@ public class ManualChallengeServiceImpl implements ManualChallangeService {
 	}
 
 	@Override
-	public boolean sendChallenge(long senderPlayerId, long receiverPlayerId) {
+	public boolean createChallenge(long senderPlayerId, long receiverPlayerId) {
 		UserProfileTO sender = userService.findUserById(senderPlayerId);
 		UserProfileTO receiver = userService.findUserById(receiverPlayerId);
 		if (sender != null && receiver != null) {

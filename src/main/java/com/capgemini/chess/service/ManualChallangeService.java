@@ -49,5 +49,5 @@ public interface ManualChallangeService {
 	 * @return true when players with given Ids exist and challenge was added
 	 *         correctly to repository, false otherwise
 	 */
-	boolean sendChallenge(long senderPlayerId, long receiverPlayerId);
+	boolean createChallenge(long senderPlayerId, long receiverPlayerId);
 }

@@ -250,7 +250,7 @@ public class ChallengeDaoTest {
 	@Test
 	public void shouldReturnChallengesExpiringBeforeGivenDate() throws Exception {
 		// given
-		LocalDateTime givenDate = LocalDateTime.of(2000, 11, 10, 10, 0);
+		LocalDateTime givenDate = LocalDateTime.of(2001, 1, 10, 10, 0);
 		int expectedSize = 6;
 		// when
 		List<ChallengeTO> challengeList = this.challengeDao.getChallengesExpiredBefore(givenDate);
@@ -258,7 +258,45 @@ public class ChallengeDaoTest {
 		// then
 		Assert.assertNotNull(challengeList);
 		Assert.assertEquals(expectedSize, actualSize);
+	}
 
+	@Test
+	public void shouldReturnChallengesExpiringAfterGivenDate() throws Exception {
+		// given
+		LocalDateTime givenDate = LocalDateTime.of(2001, 1, 10, 10, 0);
+		int expectedSize = 3;
+		// when
+		List<ChallengeTO> challengeList = this.challengeDao.getChallengesExpiredAfter(givenDate);
+		int actualSize = challengeList.size();
+		// then
+		Assert.assertNotNull(challengeList);
+		Assert.assertEquals(expectedSize, actualSize);
+	}
+
+	@Test
+	public void shouldReturnChallengesCreatedBeforeGivenDate() throws Exception {
+		// given
+		LocalDateTime givenDate = LocalDateTime.of(2001, 1, 10, 10, 0);
+		int expectedSize = 6;
+		// when
+		List<ChallengeTO> challengeList = this.challengeDao.getChallengesCreatedBefore(givenDate);
+		int actualSize = challengeList.size();
+		// then
+		Assert.assertNotNull(challengeList);
+		Assert.assertEquals(expectedSize, actualSize);
+	}
+
+	@Test
+	public void shouldReturnChallengesCreatedAfterGivenDate() throws Exception {
+		// given
+		LocalDateTime givenDate = LocalDateTime.of(2001, 1, 10, 10, 0);
+		int expectedSize = 3;
+		// when
+		List<ChallengeTO> challengeList = this.challengeDao.getChallengesCreatedAfter(givenDate);
+		int actualSize = challengeList.size();
+		// then
+		Assert.assertNotNull(challengeList);
+		Assert.assertEquals(expectedSize, actualSize);
 	}
 
 	@Test
@@ -402,4 +440,5 @@ public class ChallengeDaoTest {
 		Assert.assertEquals(givenDate, expireDateAfter);
 		Assert.assertNotEquals(givenDate, expireDateBefore);
 	}
+
 }

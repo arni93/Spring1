@@ -111,6 +111,30 @@ public class ChallengeDaoImpl implements ChallengeDao {
 	}
 
 	@Override
+	public List<ChallengeTO> getChallengesExpiredAfter(LocalDateTime date) {
+		List<ChallengeEntity> challengeList = this.challengeList.stream()
+				.filter(p -> (date.compareTo(p.getExpireDate()) < 0)).collect(Collectors.toList());
+		List<ChallengeTO> mappedChallenges = ChallengeMapper.map2TOs(challengeList);
+		return mappedChallenges;
+	}
+
+	@Override
+	public List<ChallengeTO> getChallengesCreatedBefore(LocalDateTime date) {
+		List<ChallengeEntity> challengeList = this.challengeList.stream()
+				.filter(p -> (date.compareTo(p.getCreationDate()) > 0)).collect(Collectors.toList());
+		List<ChallengeTO> mappedChallenges = ChallengeMapper.map2TOs(challengeList);
+		return mappedChallenges;
+	}
+
+	@Override
+	public List<ChallengeTO> getChallengesCreatedAfter(LocalDateTime date) {
+		List<ChallengeEntity> challengeList = this.challengeList.stream()
+				.filter(p -> (date.compareTo(p.getCreationDate()) < 0)).collect(Collectors.toList());
+		List<ChallengeTO> mappedChallenges = ChallengeMapper.map2TOs(challengeList);
+		return mappedChallenges;
+	}
+
+	@Override
 	public boolean setChallengeStatus(long challengeId, ChallengeStatus status) {
 		int position = this.findChallengePositionById(challengeId);
 		if (position < 0) {

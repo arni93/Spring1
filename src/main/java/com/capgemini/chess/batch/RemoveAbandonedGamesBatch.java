@@ -10,11 +10,23 @@ import org.springframework.stereotype.Component;
 import com.capgemini.chess.dataaccess.dao.GameDao;
 import com.capgemini.chess.service.to.GameTO;
 
+/**
+ * batch service for removing abandoned games
+ * 
+ * @author AWOZNICA
+ */
 @Component
 public class RemoveAbandonedGamesBatch {
 	@Autowired
 	private GameDao gameDao;
 
+	/**
+	 * removes games where last move was 3 months before given date
+	 * 
+	 * @param date
+	 *            date for which the condition of removing is counted
+	 * @return list of removed games
+	 */
 	public List<GameTO> removeGamesOlderThan3MonthsFrom(LocalDateTime date) {
 		LocalDateTime dateMinusThreeMonths = date.minusMonths(3);
 		List<GameTO> removedGames = new ArrayList<>();

@@ -6,8 +6,14 @@ import java.util.stream.Collectors;
 import com.capgemini.chess.dataaccess.entities.UserEntity;
 import com.capgemini.chess.service.to.UserProfileTO;
 
+/**
+ * maps UserProfileEntities to UserProfileTO and vice versa
+ * 
+ * @author AWOZNICA
+ *
+ */
 public class UserProfileMapper {
-	
+
 	public static UserProfileTO map(UserEntity userEntity) {
 		if (userEntity != null) {
 			UserProfileTO userTO = new UserProfileTO();
@@ -39,7 +45,7 @@ public class UserProfileMapper {
 		}
 		return null;
 	}
-	
+
 	public static UserEntity update(UserEntity userEntity, UserProfileTO userTO) {
 		if (userTO != null && userEntity != null) {
 			userEntity.setAboutMe(userTO.getAboutMe());
@@ -52,7 +58,7 @@ public class UserProfileMapper {
 		}
 		return userEntity;
 	}
-	
+
 	public static List<UserProfileTO> map2TOs(List<UserEntity> userEntities) {
 		return userEntities.stream().map(UserProfileMapper::map).collect(Collectors.toList());
 	}

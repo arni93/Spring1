@@ -122,7 +122,7 @@ public class ManualChallengeServiceTest {
 		long senderId = 1;
 		long receiverId = 2;
 		// when
-		boolean result = this.service.sendChallenge(senderId, receiverId);
+		boolean result = this.service.createChallenge(senderId, receiverId);
 		// then
 		Assert.assertTrue(result);
 	}
@@ -133,7 +133,7 @@ public class ManualChallengeServiceTest {
 		long senderId = 1000;
 		long receiverId = 2;
 		// when
-		boolean result = this.service.sendChallenge(senderId, receiverId);
+		boolean result = this.service.createChallenge(senderId, receiverId);
 		// then
 		Assert.assertFalse(result);
 	}
@@ -144,7 +144,7 @@ public class ManualChallengeServiceTest {
 		long senderId = 1;
 		long receiverId = 2000;
 		// when
-		boolean result = this.service.sendChallenge(senderId, receiverId);
+		boolean result = this.service.createChallenge(senderId, receiverId);
 		// then
 		Assert.assertFalse(result);
 	}

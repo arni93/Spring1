@@ -6,6 +6,12 @@ import java.util.stream.Collectors;
 import com.capgemini.chess.dataaccess.entities.GameEntity;
 import com.capgemini.chess.service.to.GameTO;
 
+/**
+ * maps GameEntities to GameTO and vice versa
+ * 
+ * @author AWOZNICA
+ *
+ */
 public class GameMapper {
 	public static GameEntity map(GameTO gameTO) {
 		GameEntity gameEntity = null;

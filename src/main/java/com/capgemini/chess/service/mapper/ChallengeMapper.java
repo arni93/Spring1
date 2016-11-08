@@ -6,6 +6,12 @@ import java.util.stream.Collectors;
 import com.capgemini.chess.dataaccess.entities.ChallengeEntity;
 import com.capgemini.chess.service.to.ChallengeTO;
 
+/**
+ * maps ChallengeEntities to ChallengeTO and vice versa
+ * 
+ * @author AWOZNICA
+ *
+ */
 public class ChallengeMapper {
 	public static ChallengeTO map(ChallengeEntity entity) {
 		if (entity != null) {

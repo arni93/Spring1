@@ -98,6 +98,33 @@ public interface ChallengeDao {
 	List<ChallengeTO> getChallengesExpiredBefore(LocalDateTime date);
 
 	/**
+	 * gets all challenges that expires after given date
+	 * 
+	 * @param date
+	 *            date
+	 * @return list of challenges that have expireDate greater than given date
+	 */
+	List<ChallengeTO> getChallengesExpiredAfter(LocalDateTime date);
+
+	/**
+	 * gets all challenges that was created before given date
+	 * 
+	 * @param date
+	 *            date
+	 * @return list of challenges that have creationDate less than given date
+	 */
+	List<ChallengeTO> getChallengesCreatedBefore(LocalDateTime date);
+
+	/**
+	 * gets all challenges that was created after given date
+	 * 
+	 * @param date
+	 *            date
+	 * @return list of challenges that have creationDate greater than given date
+	 */
+	List<ChallengeTO> getChallengesCreatedAfter(LocalDateTime date);
+
+	/**
 	 * sets new status for challenge with given challenge id
 	 * 
 	 * @param challengeId
