@@ -20,7 +20,7 @@ public interface ManualChallangeService {
 	 * @return UserProfile with given id or null when no users with given id
 	 *         found
 	 */
-	UserProfileTO findUserById(long userId);
+	public UserProfileTO findUserById(long userId);
 
 	/**
 	 * gets users with specified name
@@ -30,7 +30,7 @@ public interface ManualChallangeService {
 	 * @return returns list of users with given name, when no users found
 	 *         returns empty list
 	 */
-	List<UserProfileTO> findUserByName(String userName);
+	public List<UserProfileTO> findUserByName(String userName);
 
 	/**
 	 * gets users with specified name
@@ -40,7 +40,7 @@ public interface ManualChallangeService {
 	 * @return returns list of users with given surname, when no users found
 	 *         returns empty list
 	 */
-	List<UserProfileTO> findUserBySurname(String userSurname);
+	public List<UserProfileTO> findUserBySurname(String userSurname);
 
 	/**
 	 * @param senderPlayerId
@@ -49,5 +49,5 @@ public interface ManualChallangeService {
 	 * @return true when players with given Ids exist and challenge was added
 	 *         correctly to repository, false otherwise
 	 */
-	boolean createChallenge(long senderPlayerId, long receiverPlayerId);
+	public boolean createChallenge(long senderPlayerId, long receiverPlayerId);
 }

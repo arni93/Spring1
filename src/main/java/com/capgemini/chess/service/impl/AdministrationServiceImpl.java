@@ -20,9 +20,6 @@ public class AdministrationServiceImpl implements AdministrationService {
 	@Autowired
 	private UserDao userDao;
 
-	public AdministrationServiceImpl() {
-	}
-
 	@Override
 	public UserProfileTO findUserById(long userId) {
 		UserProfileTO foundUser = this.userDao.findUserById(userId);

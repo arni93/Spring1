@@ -21,7 +21,7 @@ public interface ChallengeDao {
 	 * @return false when challenge is null or there was problems with adding,
 	 *         true otherwise
 	 */
-	boolean addChallenge(ChallengeTO challenge);
+	public boolean addChallenge(ChallengeTO challenge);
 
 	/**
 	 * removes challenge with given id
@@ -31,7 +31,7 @@ public interface ChallengeDao {
 	 * @return false when there is no challenge with given id or challenge was
 	 *         not removed, true otherwise
 	 */
-	boolean removeChallengeByChallengeId(long challengeId);
+	public boolean removeChallengeByChallengeId(long challengeId);
 
 	/**
 	 * gets challenge with given id
@@ -41,14 +41,14 @@ public interface ChallengeDao {
 	 * @return challengeTO object when challenge with given id was found, null
 	 *         otherwise
 	 */
-	ChallengeTO getChallengeById(long id);
+	public ChallengeTO getChallengeById(long id);
 
 	/**
 	 * gets all existing challenges
 	 * 
 	 * @return list of all existing challenges in repository
 	 */
-	List<ChallengeTO> getAllChallenges();
+	public List<ChallengeTO> getAllChallenges();
 
 	/**
 	 * gets all challenges with given status
@@ -57,7 +57,7 @@ public interface ChallengeDao {
 	 *            status of challenges that are looked for
 	 * @return list of challenges with given status
 	 */
-	List<ChallengeTO> getChallengesByStatus(ChallengeStatus status);
+	public List<ChallengeTO> getChallengesByStatus(ChallengeStatus status);
 
 	/**
 	 * gets all challenges with given sender id
@@ -66,7 +66,7 @@ public interface ChallengeDao {
 	 *            sender id
 	 * @return list of all challenges with given sender id
 	 */
-	List<ChallengeTO> getChallengesBySenderPlayerId(long id);
+	public List<ChallengeTO> getChallengesBySenderPlayerId(long id);
 
 	/**
 	 * gets all challenges with given receiver id
@@ -76,7 +76,7 @@ public interface ChallengeDao {
 	 * @return list of all challenges with given receiver id, if not challenges
 	 *         found then returns empty list
 	 */
-	List<ChallengeTO> getChallengesByReceiverPlayerId(long id);
+	public List<ChallengeTO> getChallengesByReceiverPlayerId(long id);
 
 	/**
 	 * gets all challenges in with given id is either receiverId or senderId
@@ -86,7 +86,7 @@ public interface ChallengeDao {
 	 * @return returns list of challenges in which given id is receiverid or
 	 *         sender id, if no challenges found then empty list
 	 */
-	List<ChallengeTO> getChallengesByPlayerId(long id);
+	public List<ChallengeTO> getChallengesByPlayerId(long id);
 
 	/**
 	 * gets all challenges that expires before given date
@@ -95,7 +95,7 @@ public interface ChallengeDao {
 	 *            date
 	 * @return list of challenges that have expireDate less than given date
 	 */
-	List<ChallengeTO> getChallengesExpiredBefore(LocalDateTime date);
+	public List<ChallengeTO> getChallengesExpiredBefore(LocalDateTime date);
 
 	/**
 	 * gets all challenges that expires after given date
@@ -104,7 +104,7 @@ public interface ChallengeDao {
 	 *            date
 	 * @return list of challenges that have expireDate greater than given date
 	 */
-	List<ChallengeTO> getChallengesExpiredAfter(LocalDateTime date);
+	public List<ChallengeTO> getChallengesExpiredAfter(LocalDateTime date);
 
 	/**
 	 * gets all challenges that was created before given date
@@ -113,7 +113,7 @@ public interface ChallengeDao {
 	 *            date
 	 * @return list of challenges that have creationDate less than given date
 	 */
-	List<ChallengeTO> getChallengesCreatedBefore(LocalDateTime date);
+	public List<ChallengeTO> getChallengesCreatedBefore(LocalDateTime date);
 
 	/**
 	 * gets all challenges that was created after given date
@@ -122,7 +122,7 @@ public interface ChallengeDao {
 	 *            date
 	 * @return list of challenges that have creationDate greater than given date
 	 */
-	List<ChallengeTO> getChallengesCreatedAfter(LocalDateTime date);
+	public List<ChallengeTO> getChallengesCreatedAfter(LocalDateTime date);
 
 	/**
 	 * sets new status for challenge with given challenge id
@@ -134,7 +134,7 @@ public interface ChallengeDao {
 	 * @return false when there is no challenge with given id, true when change
 	 *         is made
 	 */
-	boolean setChallengeStatus(long challengeId, ChallengeStatus status);
+	public boolean setChallengeStatus(long challengeId, ChallengeStatus status);
 
 	/**
 	 * sets new sender id for challenge with given challenge id
@@ -146,7 +146,7 @@ public interface ChallengeDao {
 	 * @return false when there is no challenge with given id, true when change
 	 *         is made
 	 */
-	boolean setChallengeSenderPlayerId(long challengeId, long senderId);
+	public boolean setChallengeSenderPlayerId(long challengeId, long senderId);
 
 	/**
 	 * sets new receiver id for challenge with giveb challenge id
@@ -158,7 +158,7 @@ public interface ChallengeDao {
 	 * @return false when there is no challenge with given id, true when change
 	 *         is made
 	 */
-	boolean setChallengeReceiverPlayerId(long challengeId, long receiverId);
+	public boolean setChallengeReceiverPlayerId(long challengeId, long receiverId);
 
 	/**
 	 * sets new creation date for challenge with giveb challenge id
@@ -170,7 +170,7 @@ public interface ChallengeDao {
 	 * @return false when there is no challenge with given id, true when change
 	 *         is made
 	 */
-	boolean setChallengeCreationDate(long challengeId, LocalDateTime creationDate);
+	public boolean setChallengeCreationDate(long challengeId, LocalDateTime creationDate);
 
 	/**
 	 * sets new expire date for challenge with giveb challenge id
@@ -182,5 +182,5 @@ public interface ChallengeDao {
 	 * @return false when there is no challenge with given id, true when change
 	 *         is made
 	 */
-	boolean setChallengeExpireDate(long challengeId, LocalDateTime expireDate);
+	public boolean setChallengeExpireDate(long challengeId, LocalDateTime expireDate);
 }

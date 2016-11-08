@@ -18,7 +18,7 @@ public interface UserService {
 	 *            id of user
 	 * @return userProfileTO when there was user with given id, null otherwise
 	 */
-	UserProfileTO findUserById(long userId);
+	public UserProfileTO findUserById(long userId);
 
 	/**
 	 * gets users with given login
@@ -28,7 +28,7 @@ public interface UserService {
 	 * @return list of users with given login, when no users with given login
 	 *         found returns empty list
 	 */
-	List<UserProfileTO> findUsersByLogin(String login);
+	public List<UserProfileTO> findUsersByLogin(String login);
 
 	/**
 	 * gets users with given name
@@ -38,7 +38,7 @@ public interface UserService {
 	 * @return list of users with given name, when no users with given name
 	 *         found returns empty list
 	 */
-	List<UserProfileTO> findUsersByName(String userName);
+	public List<UserProfileTO> findUsersByName(String userName);
 
 	/**
 	 * gets users with given surname
@@ -48,7 +48,7 @@ public interface UserService {
 	 * @return list of users with given surname, when no users with given
 	 *         surname found returns empty list
 	 */
-	List<UserProfileTO> findUsersBySurname(String userSurname);
+	public List<UserProfileTO> findUsersBySurname(String userSurname);
 
 	/**
 	 * gets users with given login, name and surname
@@ -62,7 +62,7 @@ public interface UserService {
 	 * @return list of users that match criteria, when no users with given
 	 *         criteria found returns empty list
 	 */
-	List<UserProfileTO> findUsers(String login, String userName, String surname);
+	public List<UserProfileTO> findUsers(String login, String userName, String surname);
 
 	/**
 	 * gets user with given user id
@@ -71,5 +71,5 @@ public interface UserService {
 	 *            id of user
 	 * @return userProfileTO when there was user with given id, null otherwise
 	 */
-	UserProfileTO readUser(Long id);
+	public UserProfileTO readUser(Long id);
 }

@@ -10,7 +10,7 @@ import com.capgemini.chess.service.UserService;
 import com.capgemini.chess.service.to.UserProfileTO;
 
 /**
- * Implementation of UserService
+ * Implementation of UserService interface
  * 
  * @author AWOZNICA
  *

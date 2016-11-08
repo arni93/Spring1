@@ -18,7 +18,7 @@ public interface GameDao {
 	 * 
 	 * @return list of all games in repository
 	 */
-	List<GameTO> getAllGames();
+	public List<GameTO> getAllGames();
 
 	/**
 	 * adds new Game to repository
@@ -28,7 +28,7 @@ public interface GameDao {
 	 * @return true when game successfully added to repository
 	 */
 
-	boolean addGame(GameTO gameTO);
+	public boolean addGame(GameTO gameTO);
 
 	/**
 	 * gets game by game id
@@ -60,7 +60,7 @@ public interface GameDao {
 	 *         with given id
 	 * 
 	 */
-	List<GameTO> getGamesByPlayerId(long id);
+	public List<GameTO> getGamesByPlayerId(long id);
 
 	/**
 	 * returns all games with last move before specifiedDate
@@ -69,6 +69,6 @@ public interface GameDao {
 	 *            date
 	 * @return list of games with last move date before specified in parameter
 	 */
-	List<GameTO> getGamesWithLastMoveBefore(LocalDateTime date);
+	public List<GameTO> getGamesWithLastMoveBefore(LocalDateTime date);
 
 }

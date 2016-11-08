@@ -1,4 +1,4 @@
-package com.capgemini.chess.rest.controller;
+package com.capgemini.chess.controller.rest;
 
 import java.util.List;
 
@@ -15,30 +15,27 @@ import com.capgemini.chess.service.to.ChallengeTO;
 import com.capgemini.chess.service.to.UserProfileTO;
 
 @RestController
-@RequestMapping("/manualChallenge")
+@ResponseBody
+@RequestMapping("/rest/manualChallenge")
 public class ManualChallengeRestController {
 	@Autowired
 	private ManualChallangeService manualChallengeService;
 
-	@ResponseBody
 	@RequestMapping(value = "/findUserById", method = RequestMethod.GET)
 	public UserProfileTO findUserById(@RequestParam("id") long userId) {
 		return this.manualChallengeService.findUserById(userId);
 	}
 
-	@ResponseBody
 	@RequestMapping(value = "/findUsersByName", method = RequestMethod.GET)
 	public List<UserProfileTO> findUserByName(@RequestParam("name") String userName) {
 		return this.manualChallengeService.findUserByName(userName);
 	}
 
-	@ResponseBody
 	@RequestMapping(value = "/findUsersBySurname", method = RequestMethod.GET)
 	public List<UserProfileTO> findUserBySurname(@RequestParam("surname") String userSurname) {
 		return this.manualChallengeService.findUserBySurname(userSurname);
 	}
 
-	@ResponseBody
 	@RequestMapping(value = "/createChallenge", method = RequestMethod.POST)
 	public boolean createChallenge(@RequestBody ChallengeTO challenge) {
 		final long senderPlayerId = challenge.getSenderPlayerId();

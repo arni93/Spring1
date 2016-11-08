@@ -19,7 +19,7 @@ public interface AdministrationService {
 	 *            id of user
 	 * @return UserProfileTO of userId when user exists, null otherwise
 	 */
-	UserProfileTO findUserById(long userId);
+	public UserProfileTO findUserById(long userId);
 
 	/**
 	 * finds users with specified user login
@@ -29,7 +29,7 @@ public interface AdministrationService {
 	 * @return list of users with given login, when no such users then empty
 	 *         list is returned
 	 */
-	List<UserProfileTO> findUsersByLogin(String login);
+	public List<UserProfileTO> findUsersByLogin(String login);
 
 	/**
 	 * finds users with specified user first name
@@ -39,7 +39,7 @@ public interface AdministrationService {
 	 * @return list of users with given firstName, when no such users then empty
 	 *         list is returned
 	 */
-	List<UserProfileTO> findUsersByFirstName(String firstName);
+	public List<UserProfileTO> findUsersByFirstName(String firstName);
 
 	/**
 	 * finds users with specified user last name
@@ -49,7 +49,7 @@ public interface AdministrationService {
 	 * @return list of users with given lastName, when no such users then empty
 	 *         list is returned
 	 */
-	List<UserProfileTO> findUsersByLastName(String lastName);
+	public List<UserProfileTO> findUsersByLastName(String lastName);
 
 	/**
 	 * finds users with given credentials
@@ -63,7 +63,7 @@ public interface AdministrationService {
 	 * @return list of users with given credentials, when no such users then
 	 *         empty list is returned
 	 */
-	List<UserProfileTO> findUsers(String login, String firstName, String lastName);
+	public List<UserProfileTO> findUsers(String login, String firstName, String lastName);
 
 	/**
 	 * @param userId
@@ -72,7 +72,7 @@ public interface AdministrationService {
 	 *            users new first name which is set
 	 * @return true when user is found and change is made, false otherwise
 	 */
-	boolean setUserFirstName(long userId, String newFirstName);
+	public boolean setUserFirstName(long userId, String newFirstName);
 
 	/**
 	 * @param userId
