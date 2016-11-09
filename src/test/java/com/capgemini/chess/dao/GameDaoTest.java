@@ -17,6 +17,10 @@ import com.capgemini.chess.dataaccess.dao.GameDao;
 import com.capgemini.chess.dataaccess.dao.impl.GameDaoImpl;
 import com.capgemini.chess.service.to.GameTO;
 
+/**
+ * @author AWOZNICA
+ *
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
 public class GameDaoTest {

@@ -19,6 +19,10 @@ import com.capgemini.chess.service.impl.ManualChallengeServiceImpl;
 import com.capgemini.chess.service.impl.UserServiceImpl;
 import com.capgemini.chess.service.to.UserProfileTO;
 
+/**
+ * @author AWOZNICA
+ *
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
 public class ManualChallengeServiceTest {

@@ -33,6 +33,10 @@ import com.capgemini.chess.service.to.ChallengeTO;
 import com.capgemini.chess.service.to.UserProfileTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ * @author AWOZNICA
+ *
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(ChessApplication.class)
 @WebAppConfiguration
@@ -57,6 +61,12 @@ public class ManualChallengeRestControllerTest {
 		ReflectionTestUtils.setField(manualChallengeRestController, "manualChallengeService", manualChallengeService);
 	}
 
+	/*
+	 * Tests method with declaration:
+	 * 
+	 * @RequestMapping(value = "/findUserById", method = RequestMethod.GET)
+	 * public UserProfileTO findUserById(@RequestParam("id") long userId)
+	 */
 	@Test
 	public void testFindUserByIdRestService() throws Exception {
 		// given
@@ -77,6 +87,14 @@ public class ManualChallengeRestControllerTest {
 
 	}
 
+	/*
+	 * tests method with declaration
+	 * 
+	 * @RequestMapping(value = "/findUsersByName", method = RequestMethod.GET)
+	 * public List<UserProfileTO> findUserByName(@RequestParam("name") String
+	 * userName)
+	 */
+
 	@Test
 	public void testFindUsersByNameRestService() throws Exception {
 		// given
@@ -96,6 +114,13 @@ public class ManualChallengeRestControllerTest {
 				.andExpect(content().string(expectedResultAsJsonString));
 	}
 
+	/*
+	 * tests method with declaration:
+	 * 
+	 * @RequestMapping(value = "/findUsersBySurname", method =
+	 * RequestMethod.GET) public List<UserProfileTO>
+	 * findUserBySurname(@RequestParam("surname") String userSurname)
+	 */
 	@Test
 	public void testFindUsersBySurnameRestService() throws Exception {
 		// given
@@ -108,14 +133,20 @@ public class ManualChallengeRestControllerTest {
 				.thenReturn(Arrays.asList(givenUserProfile, givenUserProfile));
 		// when
 		ResultActions resultActions = mockMvc
-				.perform(get("/rest/manualChallenge/findUsersByName").accept(MediaType.APPLICATION_JSON)
-						.contentType(MediaType.APPLICATION_JSON).param("name", givenSurname));
+				.perform(get("/rest/manualChallenge/findUsersBySurname").accept(MediaType.APPLICATION_JSON)
+						.contentType(MediaType.APPLICATION_JSON).param("surname", givenSurname));
 		// then
 		resultActions.andExpect(status().isOk()).andExpect(jsonPath("[0].surname").value(givenSurname))
-				.andExpect(jsonPath("[1].name").value(givenSurname))
+				.andExpect(jsonPath("[1].surname").value(givenSurname))
 				.andExpect(content().string(expectedResultAsJsonString));
 	}
 
+	/*
+	 * tests method with declaration:
+	 * 
+	 * @RequestMapping(value = "/createChallenge", method = RequestMethod.POST)
+	 * public boolean createChallenge(@RequestBody ChallengeTO challenge)
+	 */
 	@Test
 	public void testCreateChallengeRestService() throws Exception {
 		// given

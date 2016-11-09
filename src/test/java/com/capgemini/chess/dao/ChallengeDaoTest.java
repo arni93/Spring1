@@ -18,6 +18,10 @@ import com.capgemini.chess.dataaccess.dao.impl.ChallengeDaoImpl;
 import com.capgemini.chess.enums.ChallengeStatus;
 import com.capgemini.chess.service.to.ChallengeTO;
 
+/**
+ * @author AWOZNICA
+ *
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
 public class ChallengeDaoTest {

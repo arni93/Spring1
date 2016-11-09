@@ -16,6 +16,10 @@ import com.capgemini.chess.dataaccess.dao.UserDao;
 import com.capgemini.chess.dataaccess.dao.impl.UserDaoImpl;
 import com.capgemini.chess.service.to.UserProfileTO;
 
+/**
+ * @author AWOZNICA
+ *
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
 public class UserDaoTest {
