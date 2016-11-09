@@ -11,7 +11,7 @@ import com.capgemini.chess.service.to.UserProfileTO;
  * @author AWOZNICA
  *
  */
-public interface ManualChallangeService {
+public interface ManualChallengeService {
 	/**
 	 * gets user with given id
 	 * 

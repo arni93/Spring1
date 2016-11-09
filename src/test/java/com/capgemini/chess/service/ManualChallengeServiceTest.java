@@ -23,7 +23,7 @@ import com.capgemini.chess.service.to.UserProfileTO;
 @ContextConfiguration
 public class ManualChallengeServiceTest {
 	@Autowired
-	private ManualChallangeService service;
+	private ManualChallengeService service;
 
 	@Configuration
 	static class RankServiceTestContextConfiguration {
@@ -33,7 +33,7 @@ public class ManualChallengeServiceTest {
 		}
 
 		@Bean
-		public ManualChallangeService manualChallengeService() {
+		public ManualChallengeService manualChallengeService() {
 			return new ManualChallengeServiceImpl();
 		}
 

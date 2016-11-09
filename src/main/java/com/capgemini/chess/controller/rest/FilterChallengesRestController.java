@@ -16,10 +16,11 @@ import com.capgemini.chess.enums.ChallengeStatus;
 import com.capgemini.chess.service.FilterChallengeService;
 import com.capgemini.chess.service.to.ChallengeTO;
 
+//TODO add java docs
 @Controller
 @ResponseBody
 @RequestMapping("/rest/filterChallenges")
-public class FilterChallengesController {
+public class FilterChallengesRestController {
 	@Autowired
 	private FilterChallengeService filterChallengeService;
 

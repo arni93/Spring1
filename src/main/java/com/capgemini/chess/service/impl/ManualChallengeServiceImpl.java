@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.capgemini.chess.dataaccess.dao.ChallengeDao;
 import com.capgemini.chess.enums.ChallengeStatus;
-import com.capgemini.chess.service.ManualChallangeService;
+import com.capgemini.chess.service.ManualChallengeService;
 import com.capgemini.chess.service.UserService;
 import com.capgemini.chess.service.to.ChallengeTO;
 import com.capgemini.chess.service.to.UserProfileTO;
@@ -20,7 +20,7 @@ import com.capgemini.chess.service.to.UserProfileTO;
  *
  */
 @Service
-public class ManualChallengeServiceImpl implements ManualChallangeService {
+public class ManualChallengeServiceImpl implements ManualChallengeService {
 	@Autowired
 	private UserService userService;
 

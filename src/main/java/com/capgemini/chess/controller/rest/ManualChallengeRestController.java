@@ -10,16 +10,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.capgemini.chess.service.ManualChallangeService;
+import com.capgemini.chess.service.ManualChallengeService;
 import com.capgemini.chess.service.to.ChallengeTO;
 import com.capgemini.chess.service.to.UserProfileTO;
 
+//TODO add java docs
 @RestController
 @ResponseBody
 @RequestMapping("/rest/manualChallenge")
 public class ManualChallengeRestController {
 	@Autowired
-	private ManualChallangeService manualChallengeService;
+	private ManualChallengeService manualChallengeService;
 
 	@RequestMapping(value = "/findUserById", method = RequestMethod.GET)
 	public UserProfileTO findUserById(@RequestParam("id") long userId) {
