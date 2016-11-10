@@ -18,6 +18,8 @@ import com.capgemini.chess.dataaccess.dao.impl.GameDaoImpl;
 import com.capgemini.chess.service.to.GameTO;
 
 /**
+ * tests GameDao
+ * 
  * @author AWOZNICA
  *
  */

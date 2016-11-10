@@ -33,6 +33,8 @@ import com.capgemini.chess.service.to.ChallengeTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
+ * tests filterChallengeRestController
+ * 
  * @author AWOZNICA
  *
  */
@@ -59,13 +61,13 @@ public class FilterChallengesRestControllerTest {
 		ReflectionTestUtils.setField(filterChallengesRestController, "filterChallengeService", filterChallengeService);
 	}
 
-	/*
-	 * Tests method with declaration
+	/**
+	 * Tests method with declaration below
 	 * 
-	 * @RequestMapping(value = "/byPlayerIds", method = RequestMethod.GET)
-	 * public List<ChallengeTO>
-	 * getChallengesFilteredByRequestParams(@RequestParam long
-	 * senderId,@RequestParam long receiverId)
+	 * @see @RequestMapping(value = "/byPlayerIds", method = RequestMethod.GET)
+	 *      public List
+	 *      <ChallengeTO> getChallengesFilteredByRequestParams(@RequestParam
+	 *      long senderId,@RequestParam long receiverId)
 	 * 
 	 */
 	@Test
@@ -89,13 +91,14 @@ public class FilterChallengesRestControllerTest {
 		resultActions.andExpect(status().isOk()).andExpect(content().string(resultFilteredChallengesAsJsonString));
 	}
 
-	/*
-	 * Tests method with declaration
+	/**
+	 * Tests method with declaration below
 	 * 
-	 * @RequestMapping(value = "/byPlayerIds/{senderId}/{receiverId}", method =
-	 * RequestMethod.GET) public List<ChallengeTO>
-	 * getChallengesFilteredByPathVariables(@PathVariable("senderId") long
-	 * senderId,@PathVariable("receiverId") long receiverId)
+	 * @see @RequestMapping(value = "/byPlayerIds/{senderId}/{receiverId}",
+	 *      method = RequestMethod.GET) public List
+	 *      <ChallengeTO> getChallengesFilteredByPathVariables(@PathVariable(
+	 *      "senderId") long senderId,@PathVariable("receiverId") long
+	 *      receiverId)
 	 */
 	@Test
 	public void testGetChallengesFilteredByPathVariables() throws Exception {
@@ -119,14 +122,14 @@ public class FilterChallengesRestControllerTest {
 		resultActions.andExpect(status().isOk()).andExpect(content().string(resultFilteredChallengesAsJsonString));
 	}
 
-	/*
-	 * Tests method with declaration
+	/**
+	 * Tests method with declaration below
 	 * 
-	 * @RequestMapping(value = "/byPlayerIdsAndStatus", method =
-	 * RequestMethod.GET) public List<ChallengeTO>
-	 * getChallengesFilteredByRequestParams(@RequestParam long
-	 * senderId,@RequestParam long receiverId, @RequestParam ChallengeStatus
-	 * status)
+	 * @see @RequestMapping(value = "/byPlayerIdsAndStatus", method =
+	 *      RequestMethod.GET) public List
+	 *      <ChallengeTO> getChallengesFilteredByRequestParams(@RequestParam
+	 *      long senderId,@RequestParam long receiverId, @RequestParam
+	 *      ChallengeStatus status)
 	 */
 	@Test
 	public void testGetChallengesFilteredByRequestParam2() throws Exception {
@@ -152,15 +155,15 @@ public class FilterChallengesRestControllerTest {
 		resultActions.andExpect(status().isOk()).andExpect(content().string(resultFilteredChallengesAsJsonString));
 	}
 
-	/*
-	 * tests method with declaration
+	/**
+	 * tests method with declaration below
 	 * 
-	 * @RequestMapping(value =
-	 * "/byPlayerIdsAndStatus/{senderId}/{receiverId}/{status}", method =
-	 * RequestMethod.GET) public List<ChallengeTO>
-	 * getChallengesFilteredByPathVariables(@PathVariable("senderId") long
-	 * senderId, @PathVariable("receiverId") long
-	 * receiverId, @PathVariable("status") ChallengeStatus status)
+	 * @see @RequestMapping(value =
+	 *      "/byPlayerIdsAndStatus/{senderId}/{receiverId}/{status}", method =
+	 *      RequestMethod.GET) public List
+	 *      <ChallengeTO> getChallengesFilteredByPathVariables(@PathVariable(
+	 *      "senderId") long senderId, @PathVariable("receiverId") long
+	 *      receiverId, @PathVariable("status") ChallengeStatus status)
 	 */
 
 	@Test
@@ -187,13 +190,13 @@ public class FilterChallengesRestControllerTest {
 		resultActions.andExpect(status().isOk()).andExpect(content().string(resultFilteredChallengesAsJsonString));
 	}
 
-	/*
-	 * Tests method with declaration
+	/**
+	 * Tests method with declaration below
 	 * 
-	 * @RequestMapping(value = "/byStatusAndPlayerId", method =
-	 * RequestMethod.GET) public List<ChallengeTO>
-	 * getChallengesFilteredByRequestParams(@RequestParam long
-	 * playerId, @RequestParam ChallengeStatus status)
+	 * @see @RequestMapping(value = "/byStatusAndPlayerId", method =
+	 *      RequestMethod.GET) public List
+	 *      <ChallengeTO> getChallengesFilteredByRequestParams(@RequestParam
+	 *      long playerId, @RequestParam ChallengeStatus status)
 	 */
 	@Test
 	public void testGetChallengesFilteredByRequestParam3() throws Exception {
@@ -215,13 +218,14 @@ public class FilterChallengesRestControllerTest {
 		resultActions.andExpect(status().isOk()).andExpect(content().string(resultFilteredChallengesAsJsonString));
 	}
 
-	/*
-	 * Tests method with declaration:
+	/**
+	 * Tests method with declaration below
 	 * 
-	 * @RequestMapping(value = "/byStatusAndPlayerId/{playerId}/{status}",
-	 * method = RequestMethod.GET) public List<ChallengeTO>
-	 * getChallengesFilteredByPathVariables(@PathVariable("playerId") long
-	 * playerId,@PathVariable("status") ChallengeStatus status)
+	 * @see @RequestMapping(value = "/byStatusAndPlayerId/{playerId}/{status}",
+	 *      method = RequestMethod.GET) public List
+	 *      <ChallengeTO> getChallengesFilteredByPathVariables(@PathVariable(
+	 *      "playerId") long playerId,@PathVariable("status") ChallengeStatus
+	 *      status)
 	 */
 	@Test
 	public void testGetChallengesFilteredByPathVariables3() throws Exception {
@@ -244,12 +248,13 @@ public class FilterChallengesRestControllerTest {
 		resultActions.andExpect(status().isOk()).andExpect(content().string(resultFilteredChallengesAsJsonString));
 	}
 
-	/*
-	 * Tests method with declaration:
+	/**
+	 * Tests method with declaration below
 	 * 
-	 * @RequestMapping(value = "/byStatus", method = RequestMethod.GET) public
-	 * List<ChallengeTO> getChallengesFilteredByRequestParams(@RequestParam
-	 * ChallengeStatus status)
+	 * @see @RequestMapping(value = "/byStatus", method = RequestMethod.GET)
+	 *      public List
+	 *      <ChallengeTO> getChallengesFilteredByRequestParams(@RequestParam
+	 *      ChallengeStatus status)
 	 */
 	@Test
 	public void testGetChallengesFilteredByRequestParam4() throws Exception {
@@ -269,13 +274,13 @@ public class FilterChallengesRestControllerTest {
 		resultActions.andExpect(status().isOk()).andExpect(content().string(resultFilteredChallengesAsJsonString));
 	}
 
-	/*
-	 * Tests method with declaration:
+	/**
+	 * Tests method with declaration below
 	 * 
-	 * @RequestMapping(value = "/byStatus/{status}", method = RequestMethod.GET)
-	 * public List<ChallengeTO>
-	 * getChallengesFilteredByPathVariables(@PathVariable("status")
-	 * ChallengeStatus status)
+	 * @see @RequestMapping(value = "/byStatus/{status}", method =
+	 *      RequestMethod.GET) public List
+	 *      <ChallengeTO> getChallengesFilteredByPathVariables(@PathVariable(
+	 *      "status") ChallengeStatus status)
 	 */
 	@Test
 	public void testGetChallengesFilteredByPathVariables4() throws Exception {
@@ -295,13 +300,13 @@ public class FilterChallengesRestControllerTest {
 		resultActions.andExpect(status().isOk()).andExpect(content().string(resultFilteredChallengesAsJsonString));
 	}
 
-	/*
-	 * Tests method with declaration:
+	/**
+	 * Tests method with declaration below
 	 * 
-	 * @RequestMapping(value = "/byParams/{params}", method = RequestMethod.GET)
-	 * public List<ChallengeTO>
-	 * getChallengesFilteredByCriteria(@MatrixVariable(pathVar = "params")
-	 * Map<String, List<String>> filters)
+	 * @see @RequestMapping(value = "/byParams/{params}", method =
+	 *      RequestMethod.GET) public List
+	 *      <ChallengeTO> getChallengesFilteredByCriteria(@MatrixVariable(
+	 *      pathVar = "params") Map<String, List<String>> filters)
 	 */
 	@Test
 	public void testGetChallengesFilteredByCriteria() throws Exception {

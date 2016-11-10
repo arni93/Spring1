@@ -20,6 +20,8 @@ import com.capgemini.chess.service.impl.UserServiceImpl;
 import com.capgemini.chess.service.to.UserProfileTO;
 
 /**
+ * tests ManualChallengeService
+ * 
  * @author AWOZNICA
  *
  */

@@ -20,6 +20,8 @@ import com.capgemini.chess.service.impl.AdministrationServiceImpl;
 import com.capgemini.chess.service.to.UserProfileTO;
 
 /**
+ * tests AdministratorService
+ * 
  * @author AWOZNICA
  *
  */

@@ -22,6 +22,8 @@ import com.capgemini.chess.service.impl.FilterChallengeServiceImpl;
 import com.capgemini.chess.service.to.ChallengeTO;
 
 /**
+ * tests FilterChallengeService
+ * 
  * @author AWOZNICA
  *
  */

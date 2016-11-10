@@ -17,6 +17,8 @@ import com.capgemini.chess.dataaccess.dao.impl.UserDaoImpl;
 import com.capgemini.chess.service.to.UserProfileTO;
 
 /**
+ * tests UserDao
+ * 
  * @author AWOZNICA
  *
  */

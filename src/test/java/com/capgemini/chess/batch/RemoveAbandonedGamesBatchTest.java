@@ -43,6 +43,9 @@ public class RemoveAbandonedGamesBatchTest {
 		}
 	}
 
+	/**
+	 * tests batch for given date 2000-07-04 10:00:00
+	 */
 	@Test
 	public void shouldRemove3DatesForGivenDate() throws Exception {
 		// given
@@ -56,6 +59,9 @@ public class RemoveAbandonedGamesBatchTest {
 		Assert.assertEquals(expectedSize, actualSize);
 	}
 
+	/**
+	 * tests batch for current date, should remove all games
+	 */
 	@Test
 	public void shouldRemove7DatesForCurrentDate() throws Exception {
 		// given

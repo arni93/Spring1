@@ -34,6 +34,8 @@ import com.capgemini.chess.service.to.UserProfileTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
+ * tests manualChallengeRestController
+ * 
  * @author AWOZNICA
  *
  */
@@ -61,11 +63,11 @@ public class ManualChallengeRestControllerTest {
 		ReflectionTestUtils.setField(manualChallengeRestController, "manualChallengeService", manualChallengeService);
 	}
 
-	/*
-	 * Tests method with declaration:
+	/**
+	 * Tests method with declaration below
 	 * 
-	 * @RequestMapping(value = "/findUserById", method = RequestMethod.GET)
-	 * public UserProfileTO findUserById(@RequestParam("id") long userId)
+	 * @see @RequestMapping(value = "/findUserById", method = RequestMethod.GET)
+	 *      public UserProfileTO findUserById(@RequestParam("id") long userId)
 	 */
 	@Test
 	public void testFindUserByIdRestService() throws Exception {
@@ -87,12 +89,13 @@ public class ManualChallengeRestControllerTest {
 
 	}
 
-	/*
-	 * tests method with declaration
+	/**
+	 * Tests method with declaration below
 	 * 
-	 * @RequestMapping(value = "/findUsersByName", method = RequestMethod.GET)
-	 * public List<UserProfileTO> findUserByName(@RequestParam("name") String
-	 * userName)
+	 * @see @RequestMapping(value = "/findUsersByName", method =
+	 *      RequestMethod.GET) public List
+	 *      <UserProfileTO> findUserByName(@RequestParam("name") String
+	 *      userName)
 	 */
 
 	@Test
@@ -114,12 +117,13 @@ public class ManualChallengeRestControllerTest {
 				.andExpect(content().string(expectedResultAsJsonString));
 	}
 
-	/*
-	 * tests method with declaration:
+	/**
+	 * Tests method with declaration below
 	 * 
-	 * @RequestMapping(value = "/findUsersBySurname", method =
-	 * RequestMethod.GET) public List<UserProfileTO>
-	 * findUserBySurname(@RequestParam("surname") String userSurname)
+	 * @see @RequestMapping(value = "/findUsersBySurname", method =
+	 *      RequestMethod.GET) public List
+	 *      <UserProfileTO> findUserBySurname(@RequestParam("surname") String
+	 *      userSurname)
 	 */
 	@Test
 	public void testFindUsersBySurnameRestService() throws Exception {
@@ -141,11 +145,12 @@ public class ManualChallengeRestControllerTest {
 				.andExpect(content().string(expectedResultAsJsonString));
 	}
 
-	/*
-	 * tests method with declaration:
+	/**
+	 * Tests method with declaration below
 	 * 
-	 * @RequestMapping(value = "/createChallenge", method = RequestMethod.POST)
-	 * public boolean createChallenge(@RequestBody ChallengeTO challenge)
+	 * @see @RequestMapping(value = "/createChallenge", method =
+	 *      RequestMethod.POST) public boolean createChallenge(@RequestBody
+	 *      ChallengeTO challenge)
 	 */
 	@Test
 	public void testCreateChallengeRestService() throws Exception {

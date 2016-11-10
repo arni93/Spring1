@@ -19,6 +19,8 @@ import com.capgemini.chess.enums.ChallengeStatus;
 import com.capgemini.chess.service.to.ChallengeTO;
 
 /**
+ * Tests ChallengeDao
+ * 
  * @author AWOZNICA
  *
  */
